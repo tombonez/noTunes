@@ -28,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             statusItem.menu = nil
         } else {
             if statusItem.image == NSImage(named: "StatusBarButtonImage") {
+                self.appIsLaunched()
                 statusItem.image = NSImage(named: "StatusBarButtonImageActive")
             } else {
                 statusItem.image = NSImage(named: "StatusBarButtonImage")
@@ -43,12 +44,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
         
-        self.createListeners()
+        self.appIsLaunched()
+        self.createListener()
     }
     
-    func createListeners() {
+    func createListener() {
         let workspaceNotificationCenter = NSWorkspace.shared().notificationCenter
         workspaceNotificationCenter.addObserver(self, selector: #selector(self.appWillLaunch(note:)), name: .NSWorkspaceWillLaunchApplication, object: nil)
+    }
+    
+    func appIsLaunched() {
+        let apps = NSWorkspace.shared().runningApplications
+        for currentApp in apps.enumerated() {
+            let runningApp = apps[currentApp.offset]
+            
+            if(runningApp.activationPolicy == .regular) {
+                if(runningApp.localizedName == "iTunes") {
+                    self.terminateProcessWith(Int(runningApp.processIdentifier), runningApp.localizedName!)
+                }
+            }
+        }
     }
     
     func appWillLaunch(note:Notification) {
@@ -56,9 +71,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if let processName:String = note.userInfo?["NSApplicationName"] as? String {
                 if let processId = note.userInfo?["NSApplicationProcessIdentifier"] as? Int {
                     switch processName {
-                    case "iTunes":
-                        self.terminateProcessWith(processId,processName)
-                    default:break
+                        case "iTunes":
+                            self.terminateProcessWith(processId, processName)
+                        default:break
                     }
                 }
             }
