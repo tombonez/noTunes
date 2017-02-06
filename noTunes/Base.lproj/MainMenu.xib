@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
@@ -14,12 +14,20 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="noTunes" customModuleProvider="target">
             <connections>
+                <outlet property="startupMenu" destination="pQg-jD-Dak" id="h1i-BF-1zP"/>
                 <outlet property="statusMenu" destination="WAR-Dm-F96" id="90i-cz-uCW"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="WAR-Dm-F96">
             <items>
+                <menuItem title="Launch on startup" id="pQg-jD-Dak">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startupClicked:" target="Voe-Tx-rLC" id="uz8-Yb-dVn"/>
+                        <binding destination="4fn-wC-gIW" name="value" keyPath="values.Auto Launch" id="Uc1-W3-nrG"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" id="tKr-kb-ZPz">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -28,5 +36,6 @@
                 </menuItem>
             </items>
         </menu>
+        <userDefaultsController representsSharedInstance="YES" id="4fn-wC-gIW"/>
     </objects>
 </document>

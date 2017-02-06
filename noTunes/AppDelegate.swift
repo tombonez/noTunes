@@ -7,13 +7,21 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var statusMenu: NSMenu!
     
+    @IBOutlet weak var startupMenu: NSMenuItem!
+    
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    
+    @IBAction func startupClicked(_ sender: NSMenuItem) {
+        let autoLaunch = (startupMenu.state != NSOnState)
+        SMLoginItemSetEnabled("digital.twisted.noTunesHelper" as CFString, autoLaunch)
+    }
     
     @IBAction func quitClicked(_ sender: NSMenuItem) {
         NSApplication.shared().terminate(self)
