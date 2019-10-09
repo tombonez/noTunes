@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E21D28081E27CA72000BBBEA /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21D28071E27CA72000BBBEA /* ServiceManagement.framework */; };
-		E237C9D11E27C86E0006F607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E237C9D01E27C86E0006F607 /* AppDelegate.m */; };
-		E237C9D41E27C86E0006F607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E237C9D31E27C86E0006F607 /* main.m */; };
-		E237C9D61E27C86E0006F607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E237C9D51E27C86E0006F607 /* Assets.xcassets */; };
-		E237C9D91E27C86E0006F607 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E237C9D71E27C86E0006F607 /* MainMenu.xib */; };
-		E237C9DF1E27C8EB0006F607 /* noTunesHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = E237C9CD1E27C86D0006F607 /* noTunesHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E29B3C731E1D97CF00CB67E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29B3C721E1D97CF00CB67E3 /* AppDelegate.swift */; };
 		E29B3C751E1D97CF00CB67E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29B3C741E1D97CF00CB67E3 /* Assets.xcassets */; };
 		E29B3C781E1D97CF00CB67E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29B3C761E1D97CF00CB67E3 /* MainMenu.xib */; };
@@ -25,21 +19,12 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				E237C9DF1E27C8EB0006F607 /* noTunesHelper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E21D28071E27CA72000BBBEA /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		E237C9CD1E27C86D0006F607 /* noTunesHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noTunesHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E237C9CF1E27C86E0006F607 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E237C9D01E27C86E0006F607 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E237C9D31E27C86E0006F607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E237C9D51E27C86E0006F607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E237C9D81E27C86E0006F607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		E237C9DA1E27C86E0006F607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E29B3C6F1E1D97CF00CB67E3 /* noTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29B3C721E1D97CF00CB67E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E29B3C741E1D97CF00CB67E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,60 +33,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E237C9CA1E27C86D0006F607 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E29B3C6C1E1D97CF00CB67E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E21D28081E27CA72000BBBEA /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E21D28061E27CA72000BBBEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E21D28071E27CA72000BBBEA /* ServiceManagement.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E237C9CE1E27C86E0006F607 /* noTunesHelper */ = {
-			isa = PBXGroup;
-			children = (
-				E237C9CF1E27C86E0006F607 /* AppDelegate.h */,
-				E237C9D01E27C86E0006F607 /* AppDelegate.m */,
-				E237C9D51E27C86E0006F607 /* Assets.xcassets */,
-				E237C9D71E27C86E0006F607 /* MainMenu.xib */,
-				E237C9DA1E27C86E0006F607 /* Info.plist */,
-				E237C9D21E27C86E0006F607 /* Supporting Files */,
-			);
-			path = noTunesHelper;
-			sourceTree = "<group>";
-		};
-		E237C9D21E27C86E0006F607 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E237C9D31E27C86E0006F607 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		E29B3C661E1D97CF00CB67E3 = {
 			isa = PBXGroup;
 			children = (
 				E29B3C711E1D97CF00CB67E3 /* noTunes */,
-				E237C9CE1E27C86E0006F607 /* noTunesHelper */,
 				E29B3C701E1D97CF00CB67E3 /* Products */,
-				E21D28061E27CA72000BBBEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				E29B3C6F1E1D97CF00CB67E3 /* noTunes.app */,
-				E237C9CD1E27C86D0006F607 /* noTunesHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,23 +73,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E237C9CC1E27C86D0006F607 /* noTunesHelper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E237C9DD1E27C86E0006F607 /* Build configuration list for PBXNativeTarget "noTunesHelper" */;
-			buildPhases = (
-				E237C9C91E27C86D0006F607 /* Sources */,
-				E237C9CA1E27C86D0006F607 /* Frameworks */,
-				E237C9CB1E27C86D0006F607 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = noTunesHelper;
-			productName = noTunesHelper;
-			productReference = E237C9CD1E27C86D0006F607 /* noTunesHelper.app */;
-			productType = "com.apple.product-type.application";
-		};
 		E29B3C6E1E1D97CF00CB67E3 /* noTunes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E29B3C7C1E1D97CF00CB67E3 /* Build configuration list for PBXNativeTarget "noTunes" */;
@@ -170,24 +98,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Twisted Digital Ltd.";
 				TargetAttributes = {
-					E237C9CC1E27C86D0006F607 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JP6WW46Y42;
-						ProvisioningStyle = Automatic;
-					};
 					E29B3C6E1E1D97CF00CB67E3 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = JP6WW46Y42;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = E29B3C6A1E1D97CF00CB67E3 /* Build configuration list for PBXProject "noTunes" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -199,21 +123,11 @@
 			projectRoot = "";
 			targets = (
 				E29B3C6E1E1D97CF00CB67E3 /* noTunes */,
-				E237C9CC1E27C86D0006F607 /* noTunesHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E237C9CB1E27C86D0006F607 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E237C9D61E27C86E0006F607 /* Assets.xcassets in Resources */,
-				E237C9D91E27C86E0006F607 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E29B3C6D1E1D97CF00CB67E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,15 +140,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E237C9C91E27C86D0006F607 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E237C9D41E27C86E0006F607 /* main.m in Sources */,
-				E237C9D11E27C86E0006F607 /* AppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E29B3C6B1E1D97CF00CB67E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,14 +151,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E237C9D71E27C86E0006F607 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E237C9D81E27C86E0006F607 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 		E29B3C761E1D97CF00CB67E3 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -265,36 +162,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E237C9DB1E27C86E0006F607 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JP6WW46Y42;
-				INFOPLIST_FILE = noTunesHelper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = digital.twisted.noTunesHelper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		E237C9DC1E27C86E0006F607 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JP6WW46Y42;
-				INFOPLIST_FILE = noTunesHelper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = digital.twisted.noTunesHelper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		E29B3C7A1E1D97CF00CB67E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -304,15 +171,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -353,15 +228,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -392,11 +275,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JP6WW46Y42;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = noTunes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = digital.twisted.noTunes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -407,26 +293,20 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JP6WW46Y42;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = noTunes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = digital.twisted.noTunes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E237C9DD1E27C86E0006F607 /* Build configuration list for PBXNativeTarget "noTunesHelper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E237C9DB1E27C86E0006F607 /* Debug */,
-				E237C9DC1E27C86E0006F607 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E29B3C6A1E1D97CF00CB67E3 /* Build configuration list for PBXProject "noTunes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
