@@ -1,6 +1,6 @@
 # noTunes
 
-noTunes is an application that will will prevent iTunes _or_ Apple Music from launching.
+noTunes is a macOS application that will will prevent iTunes _or_ Apple Music from launching.
 
 Simply launch the app and iTunes/Music will no longer be able to launch.
 
