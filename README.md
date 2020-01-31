@@ -6,6 +6,7 @@ Simply launch the noTunes app and iTunes/Music will no longer be able to launch.
 
 You can enable/disable the apps functionality via the menu bar icon, which is a simple toggle.
 
-Pre-Catalina release (kills iTunes): [noTunes-1.2.zip](https://github.com/tombonez/noTunes/releases/download/v1.2/noTunes-1.2.zip)
+macOS >= 10.15/Catalina (kills Apple Music): [noTunes-2.0.zip](https://github.com/tombonez/noTunes/releases/download/v2.0/noTunes-2.0.zip)
 
-Catalina release (kills Apple Music): [noTunes-2.0.zip](https://github.com/tombonez/noTunes/releases/download/v2.0/noTunes-2.0.zip)
+macOS <= 10.14/Mojave (kills iTunes): [noTunes-1.2.zip](https://github.com/tombonez/noTunes/releases/download/v1.2/noTunes-1.2.zip)
+
