@@ -1,7 +1,12 @@
 # noTunes
 
-Simply launch the app and iTunes will no longer be able to launch.
+noTunes is a macOS application that will prevent iTunes _or_ Apple Music from launching.
 
-You can enable/disable the apps functionality via the menu bar icon.
+Simply launch the noTunes app and iTunes/Music will no longer be able to launch. For example, when bluetooth headphones reconnect to a laptop which may trigger iTunes/Music to open.
 
-Latest release: [noTunes-1.2.zip](https://github.com/tombonez/noTunes/releases/download/v1.2/noTunes-1.2.zip)
+You can enable/disable the apps functionality via the menu bar icon, which is a simple toggle.
+
+macOS >= 10.15/Catalina (kills Apple Music): [noTunes-2.0.zip](https://github.com/tombonez/noTunes/releases/download/v2.0/noTunes-2.0.zip)
+
+macOS <= 10.14/Mojave (kills iTunes): [noTunes-1.2.zip](https://github.com/tombonez/noTunes/releases/download/v1.2/noTunes-1.2.zip)
+
