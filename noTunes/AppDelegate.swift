@@ -14,23 +14,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var statusMenu: NSMenu!
     
-    @IBOutlet weak var startupMenu: NSMenuItem!
-    
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-    
-    @IBAction func startupClicked(_ sender: NSMenuItem) {
-        let autoLaunch = (startupMenu.state != NSOnState)
-        SMLoginItemSetEnabled("digital.twisted.noTunesHelper" as CFString, autoLaunch)
-    }
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     @IBAction func quitClicked(_ sender: NSMenuItem) {
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
     
-    func statusBarButtonClicked(sender: NSStatusBarButton) {
+    @objc func statusBarButtonClicked(sender: NSStatusBarButton) {
         let event = NSApp.currentEvent!
         
-        if event.type == NSEventType.rightMouseUp {
+        if event.type == NSEvent.EventType.rightMouseUp {
             statusItem.menu = statusMenu
             statusItem.popUpMenu(statusMenu)
             statusItem.menu = nil
@@ -57,12 +50,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func createListener() {
-        let workspaceNotificationCenter = NSWorkspace.shared().notificationCenter
-        workspaceNotificationCenter.addObserver(self, selector: #selector(self.appWillLaunch(note:)), name: .NSWorkspaceWillLaunchApplication, object: nil)
+        let workspaceNotificationCenter = NSWorkspace.shared.notificationCenter
+        workspaceNotificationCenter.addObserver(self, selector: #selector(self.appWillLaunch(note:)), name: NSWorkspace.willLaunchApplicationNotification, object: nil)
     }
     
     func appIsLaunched() {
-        let apps = NSWorkspace.shared().runningApplications
+        let apps = NSWorkspace.shared.runningApplications
         for currentApp in apps.enumerated() {
             let runningApp = apps[currentApp.offset]
             
@@ -70,16 +63,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if(runningApp.localizedName == "iTunes") {
                     self.terminateProcessWith(Int(runningApp.processIdentifier), runningApp.localizedName!)
                 }
+                if(runningApp.localizedName == "Music") {
+                    self.terminateProcessWith(Int(runningApp.processIdentifier), runningApp.localizedName!)
+                }
             }
         }
     }
     
-    func appWillLaunch(note:Notification) {
+    @objc func appWillLaunch(note:Notification) {
         if statusItem.image == NSImage(named: "StatusBarButtonImageActive") {
             if let processName:String = note.userInfo?["NSApplicationName"] as? String {
                 if let processId = note.userInfo?["NSApplicationProcessIdentifier"] as? Int {
                     switch processName {
                         case "iTunes":
+                            self.terminateProcessWith(processId, processName)
+                        case "Music":
                             self.terminateProcessWith(processId, processName)
                         default:break
                     }
