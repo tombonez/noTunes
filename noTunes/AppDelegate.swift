@@ -60,7 +60,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let runningApp = apps[currentApp.offset]
             
             if(runningApp.activationPolicy == .regular) {
-                if(runningApp.localizedName == "com.apple.itunes") {
+                if(runningApp.bundleIdentifier == "com.apple.itunes") {
                     self.terminateProcessWith(Int(runningApp.processIdentifier), runningApp.localizedName!)
                 }
                 if(runningApp.bundleIdentifier == "com.apple.Music") {
