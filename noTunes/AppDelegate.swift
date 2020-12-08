@@ -60,10 +60,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let runningApp = apps[currentApp.offset]
             
             if(runningApp.activationPolicy == .regular) {
-                if(runningApp.localizedName == "iTunes") {
+                if(runningApp.bundleIdentifier == "com.apple.itunes") {
                     self.terminateProcessWith(Int(runningApp.processIdentifier), runningApp.localizedName!)
                 }
-                if(runningApp.localizedName == "Music") {
+                if(runningApp.bundleIdentifier == "com.apple.Music") {
                     self.terminateProcessWith(Int(runningApp.processIdentifier), runningApp.localizedName!)
                 }
             }
@@ -72,12 +72,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func appWillLaunch(note:Notification) {
         if statusItem.image == NSImage(named: "StatusBarButtonImageActive") {
-            if let processName:String = note.userInfo?["NSApplicationName"] as? String {
+            if let processName:String = note.userInfo?["NSApplicationBundleIdentifier"] as? String {
                 if let processId = note.userInfo?["NSApplicationProcessIdentifier"] as? Int {
                     switch processName {
-                        case "iTunes":
+                        case "com.apple.itunes":
                             self.terminateProcessWith(processId, processName)
-                        case "Music":
+                        case "com.apple.Music":
                             self.terminateProcessWith(processId, processName)
                         default:break
                     }
