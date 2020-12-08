@@ -8,6 +8,6 @@ You can enable/disable the apps functionality via the menu bar icon, which is a 
 
 ## Downloads
 
-noTunes 2.0 (with menu bar icon): [noTunes-2.0.zip](https://github.com/tombonez/noTunes/releases/download/v2.0/noTunes-2.0.zip)
+noTunes 2.1 (with menu bar icon): [noTunes-2.1.zip](https://github.com/tombonez/noTunes/releases/download/v2.1/noTunes-2.1.zip)
 
-noTunes 2.0 (without menu bar icon): [noTunes-2.0-noMenu.zip](https://github.com/tombonez/noTunes/releases/download/v2.0/noTunes-2.0-noMenu.zip)
+noTunes 2.1 (without menu bar icon): [noTunes-2.1-noMenu.zip](https://github.com/tombonez/noTunes/releases/download/v2.1/noTunes-2.1-noMenu.zip)
