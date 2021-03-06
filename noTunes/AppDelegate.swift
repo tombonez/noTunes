@@ -75,7 +75,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if let processName:String = note.userInfo?["NSApplicationBundleIdentifier"] as? String {
                 if let processId = note.userInfo?["NSApplicationProcessIdentifier"] as? Int {
                     switch processName {
-                        case "com.apple.itunes":
+                        case "com.apple.iTunes":
                             self.terminateProcessWith(processId, processName)
                         case "com.apple.Music":
                             self.terminateProcessWith(processId, processName)
