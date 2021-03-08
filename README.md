@@ -12,11 +12,11 @@ You can enable/disable the apps functionality via the menu bar icon, which is a 
 
 Left click the menu bar icon to toggle between its active states.
 
-**Enabled**
+**Enabled (prevents iTunes/Music from opening)**
 
 ![noTunes Enabled](/screenshots/menubar-enabled.png)
 
-**Disabled**
+**Disabled (allows iTunes/Music to open)**
 
 ![noTunes Disabled](/screenshots/menubar-disabled.png)
 
