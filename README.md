@@ -28,7 +28,7 @@ Right click the menu bar icon and click quit.
 
 **No menu bar version**
 
-Either quit the app via Activity Monitor or run the following command in the terminal:
+Either quit the app via Activity Monitor or run the following command in Terminal:
 
 ```bash
 osascript -e 'quit app "noTunes"'
