@@ -1,3 +1,5 @@
+![noTunes Logo](/images/AppIcons.png?raw=true)
+
 # noTunes
 
 noTunes is a macOS application that will prevent iTunes _or_ Apple Music from launching.
