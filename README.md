@@ -1,4 +1,4 @@
-![noTunes Logo](/images/AppIcons.png?raw=true)
+![noTunes Logo](/images/AppIcon.png)
 
 # noTunes
 
