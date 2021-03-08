@@ -10,7 +10,7 @@ You can enable/disable the apps functionality via the menu bar icon, which is a 
 
 ## Usage
 
-Left clicking the menu bar icon will toggle between its active states.
+Left click the menu bar icon to toggle between its active states.
 
 **Enabled**
 
