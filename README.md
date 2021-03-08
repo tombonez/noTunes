@@ -8,8 +8,34 @@ Simply launch the noTunes app and iTunes/Music will no longer be able to launch.
 
 You can enable/disable the apps functionality via the menu bar icon, which is a simple toggle.
 
+## Usage
+
+Left clicking the menu bar icon will toggle between its active states.
+
+**Enabled**
+
+![noTunes Enabled](/screenshots/menubar-enabled.png)
+
+**Disabled**
+
+![noTunes Disabled](/screenshots/menubar-disabled.png)
+
+To quit the app either:
+
+**Menu bar version**
+
+Right click the menu bar icon and click quit.
+
+**No menu bar version**
+
+Either quit the app via Activity Monitor or run the following command in the terminal:
+
+```bash
+osascript -e 'quit app "noTunes"'
+```
+
 ## Downloads
 
-noTunes 2.3 (with menu bar icon): [noTunes-2.3.zip](https://github.com/tombonez/noTunes/releases/download/v2.3/noTunes-2.3.zip)
+noTunes 3.0 (with menu bar icon): [noTunes-3.0.zip](https://github.com/tombonez/noTunes/releases/download/v3.0/noTunes-3.0.zip)
 
-noTunes 2.3 (without menu bar icon): [noTunes-2.3-noMenu.zip](https://github.com/tombonez/noTunes/releases/download/v2.3/noTunes-2.3-noMenu.zip)
+noTunes 3.0 (without menu bar icon): [noTunes-3.0-noMenu.zip](https://github.com/tombonez/noTunes/releases/download/v3.0/noTunes-3.0-noMenu.zip)
