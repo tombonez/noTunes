@@ -11,10 +11,18 @@ import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
-    @IBOutlet weak var statusMenu: NSMenu!
+
+    let defaults = UserDefaults.standard
     
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    
+    @IBOutlet weak var statusMenu: NSMenu!
+
+    @IBAction func hideIconClicked(_ sender: NSMenuItem) {
+        defaults.set(true, forKey: "hideIcon")
+        NSStatusBar.system.removeStatusItem(statusItem)
+        self.appIsLaunched()
+    }
     
     @IBAction func quitClicked(_ sender: NSMenuItem) {
         NSApplication.shared.terminate(self)
@@ -45,6 +53,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
         
+        if defaults.bool(forKey: "hideIcon") {
+            NSStatusBar.system.removeStatusItem(statusItem)
+        }
+        
         self.appIsLaunched()
         self.createListener()
     }
@@ -71,7 +83,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func appWillLaunch(note:Notification) {
-        if statusItem.image == NSImage(named: "StatusBarButtonImageActive") {
+        if statusItem.image == NSImage(named: "StatusBarButtonImageActive") || defaults.bool(forKey: "hideIcon") {
             if let processName:String = note.userInfo?["NSApplicationBundleIdentifier"] as? String {
                 if let processId = note.userInfo?["NSApplicationProcessIdentifier"] as? Int {
                     switch processName {
