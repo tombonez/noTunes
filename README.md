@@ -8,6 +8,18 @@ Simply launch the noTunes app and iTunes/Music will no longer be able to launch.
 
 You can toggle the apps functionality via the menu bar icon with a simple left click.
 
+## Installation
+
+### Homebrew
+
+```bash
+brew install --cask notunes
+```
+
+### Direct Download
+
+[noTunes-3.1.zip](https://github.com/tombonez/noTunes/releases/download/v3.1/noTunes-3.1.zip)
+
 ## Usage
 
 ### Toggle noTunes Funcationality
@@ -49,10 +61,6 @@ Quit the app via Activity Monitor or run the following command in Terminal:
 ```bash
 osascript -e 'quit app "noTunes"'
 ```
-
-## Downloads
-
-noTunes 3.1: [noTunes-3.1.zip](https://github.com/tombonez/noTunes/releases/download/v3.1/noTunes-3.1.zip)
 
 ## License
 
