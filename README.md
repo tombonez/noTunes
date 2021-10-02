@@ -1,5 +1,9 @@
 ![noTunes Logo](/screenshots/app-icon.png)
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/tombonez/notunes)
+![GitHub all releases](https://img.shields.io/github/downloads/tombonez/notunes/total)
+![GitHub](https://img.shields.io/github/license/tombonez/notunes)
+
 # noTunes
 
 noTunes is a macOS application that will prevent iTunes _or_ Apple Music from launching.
