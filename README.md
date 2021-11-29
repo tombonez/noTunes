@@ -26,7 +26,7 @@ brew install --cask notunes
 
 ## Usage
 
-### Toggle noTunes Funcationality
+### Toggle noTunes Functionality
 
 Left click the menu bar icon to toggle between its active states.
 
