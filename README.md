@@ -4,6 +4,12 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/tombonez/notunes/total)
 ![GitHub](https://img.shields.io/github/license/tombonez/notunes)
 
+# Notice
+
+The certificate used in noTunes prior to version 3.2 is set to expire on the 14th January 2022.
+
+To continue using noTunes please update to version 3.2 or greater.
+
 # noTunes
 
 noTunes is a macOS application that will prevent iTunes _or_ Apple Music from launching.
@@ -22,7 +28,7 @@ brew install --cask notunes
 
 ### Direct Download
 
-[noTunes-3.1.zip](https://github.com/tombonez/noTunes/releases/download/v3.1/noTunes-3.1.zip)
+[noTunes-3.2.zip](https://github.com/tombonez/noTunes/releases/download/v3.2/noTunes-3.2.zip)
 
 ## Usage
 
