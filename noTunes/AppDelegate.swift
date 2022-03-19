@@ -89,12 +89,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     switch processName {
                         case "com.apple.iTunes":
                             self.terminateProcessWith(processId, processName)
+                            self.launchReplacement()
                         case "com.apple.Music":
                             self.terminateProcessWith(processId, processName)
+                            self.launchReplacement()
                         default:break
                     }
                 }
             }
+        }
+    }
+    
+    func launchReplacement() {
+        let replacement = defaults.string(forKey: "replacement");
+        if (replacement != nil) {
+            let task = Process()
+            
+            task.arguments = ["-c", replacement!];
+            task.launchPath = "/bin/bash"
+            task.launch()
         }
     }
     
