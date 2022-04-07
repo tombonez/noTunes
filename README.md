@@ -32,6 +32,10 @@ brew install --cask notunes
 
 ## Usage
 
+### Set noTunes to launch at startup
+
+Navigate to System Preferences -> Users & Groups.  Under your user, select "Login Items", click the lock on the bottom left and enter your login password to make changes.  Click the plus sign (+) in the main panel and search for noTunes.  Select it and click "Add".
+
 ### Toggle noTunes Functionality
 
 Left click the menu bar icon to toggle between its active states.
