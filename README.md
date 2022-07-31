@@ -76,7 +76,7 @@ osascript -e 'quit app "noTunes"'
 
 Replace `YOUR_MUSIC_APP` with the name of your music app in the following command.
 ```bash
-defaults write digital.twisted.noTunes replacement /Applications/YOUR_MUSIC_APP.app/Contents/MacOS/YOUR_MUSIC_APP
+defaults write digital.twisted.noTunes replacement /Applications/YOUR_MUSIC_APP.app
 ```
 
 Then `/Applications/YOUR_MUSIC_APP.app` will launch when iTunes/Music attempts to launch.
