@@ -28,7 +28,7 @@ brew install --cask notunes
 
 ### Direct Download
 
-[noTunes-3.2.zip](https://github.com/tombonez/noTunes/releases/download/v3.2/noTunes-3.2.zip)
+[noTunes-3.3.zip](https://github.com/tombonez/noTunes/releases/download/v3.3/noTunes-3.3.zip)
 
 ## Usage
 
