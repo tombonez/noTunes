@@ -76,6 +76,21 @@ Quit the app via Activity Monitor or run the following command in Terminal:
 osascript -e 'quit app "noTunes"'
 ```
 
+### Set replacement for iTunes / Apple Music
+
+Replace `YOUR_MUSIC_APP` with the name of your music app in the following command.
+```bash
+defaults write digital.twisted.noTunes replacement /Applications/YOUR_MUSIC_APP.app
+```
+
+Then `/Applications/YOUR_MUSIC_APP.app` will launch when iTunes/Music attempts to launch.
+
+The following command will disable the replacement.
+
+```bash
+defaults delete digital.twisted.noTunes replacement
+```
+
 ## License
 
 The code is available under the [MIT License](https://github.com/tombonez/notunes/blob/master/LICENSE).

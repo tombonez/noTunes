@@ -13,9 +13,9 @@ import ServiceManagement
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     let defaults = UserDefaults.standard
-    
+
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    
+
     @IBOutlet weak var statusMenu: NSMenu!
 
     @IBAction func hideIconClicked(_ sender: NSMenuItem) {
@@ -23,14 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSStatusBar.system.removeStatusItem(statusItem)
         self.appIsLaunched()
     }
-    
+
     @IBAction func quitClicked(_ sender: NSMenuItem) {
         NSApplication.shared.terminate(self)
     }
-    
+
     @objc func statusBarButtonClicked(sender: NSStatusBarButton) {
         let event = NSApp.currentEvent!
-        
+
         if event.type == NSEvent.EventType.rightMouseUp {
             statusItem.menu = statusMenu
             statusItem.popUpMenu(statusMenu)
@@ -44,33 +44,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-    
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.image = NSImage(named: "StatusBarButtonImageActive")
-        
+
         if let button = statusItem.button {
             button.action = #selector(self.statusBarButtonClicked(sender:))
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
-        
+
         if defaults.bool(forKey: "hideIcon") {
             NSStatusBar.system.removeStatusItem(statusItem)
         }
-        
+
         self.appIsLaunched()
         self.createListener()
     }
-    
+
     func createListener() {
         let workspaceNotificationCenter = NSWorkspace.shared.notificationCenter
         workspaceNotificationCenter.addObserver(self, selector: #selector(self.appWillLaunch(note:)), name: NSWorkspace.willLaunchApplicationNotification, object: nil)
     }
-    
+
     func appIsLaunched() {
         let apps = NSWorkspace.shared.runningApplications
         for currentApp in apps.enumerated() {
             let runningApp = apps[currentApp.offset]
-            
+
             if(runningApp.activationPolicy == .regular) {
                 if(runningApp.bundleIdentifier == "com.apple.iTunes") {
                     self.terminateProcessWith(Int(runningApp.processIdentifier), runningApp.localizedName!)
@@ -81,7 +81,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-    
+
     @objc func appWillLaunch(note:Notification) {
         if statusItem.image == NSImage(named: "StatusBarButtonImageActive") || defaults.bool(forKey: "hideIcon") {
             if let processName:String = note.userInfo?["NSApplicationBundleIdentifier"] as? String {
@@ -89,18 +89,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     switch processName {
                         case "com.apple.iTunes":
                             self.terminateProcessWith(processId, processName)
+                            self.launchReplacement()
                         case "com.apple.Music":
                             self.terminateProcessWith(processId, processName)
+                            self.launchReplacement()
                         default:break
                     }
                 }
             }
         }
     }
-    
+
+    func launchReplacement() {
+        let replacement = defaults.string(forKey: "replacement");
+        if (replacement != nil) {
+            let task = Process()
+
+            task.arguments = [replacement!];
+            task.launchPath = "/usr/bin/open"
+            task.launch()
+        }
+    }
+
     func terminateProcessWith(_ processId:Int,_ processName:String) {
         let process = NSRunningApplication.init(processIdentifier: pid_t(processId))
         process?.forceTerminate()
     }
-    
+
 }
