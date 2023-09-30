@@ -30,23 +30,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func statusBarButtonClicked(sender: NSStatusBarButton) {
         let event = NSApp.currentEvent!
-
+        
         if event.type == NSEvent.EventType.rightMouseUp {
             statusItem.menu = statusMenu
-            statusItem.popUpMenu(statusMenu)
+            if let menu = statusItem.menu {
+                menu.popUp(positioning: menu.items.first, at: NSEvent.mouseLocation, in: nil)
+            }
             statusItem.menu = nil
         } else {
-            if statusItem.image == NSImage(named: "StatusBarButtonImage") {
+            if statusItem.button?.image == NSImage(named: "StatusBarButtonImage") {
                 self.appIsLaunched()
-                statusItem.image = NSImage(named: "StatusBarButtonImageActive")
+                statusItem.button?.image = NSImage(named: "StatusBarButtonImageActive")
             } else {
-                statusItem.image = NSImage(named: "StatusBarButtonImage")
+                statusItem.button?.image = NSImage(named: "StatusBarButtonImage")
             }
         }
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.image = NSImage(named: "StatusBarButtonImageActive")
+        statusItem.button?.image = NSImage(named: "StatusBarButtonImageActive")
 
         if let button = statusItem.button {
             button.action = #selector(self.statusBarButtonClicked(sender:))
@@ -73,28 +75,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
             if(runningApp.activationPolicy == .regular) {
                 if(runningApp.bundleIdentifier == "com.apple.iTunes") {
-                    self.terminateProcessWith(Int(runningApp.processIdentifier), runningApp.localizedName!)
+                    runningApp.forceTerminate()
                 }
                 if(runningApp.bundleIdentifier == "com.apple.Music") {
-                    self.terminateProcessWith(Int(runningApp.processIdentifier), runningApp.localizedName!)
+                    runningApp.forceTerminate()
                 }
             }
         }
     }
 
     @objc func appWillLaunch(note:Notification) {
-        if statusItem.image == NSImage(named: "StatusBarButtonImageActive") || defaults.bool(forKey: "hideIcon") {
-            if let processName:String = note.userInfo?["NSApplicationBundleIdentifier"] as? String {
-                if let processId = note.userInfo?["NSApplicationProcessIdentifier"] as? Int {
-                    switch processName {
-                        case "com.apple.iTunes":
-                            self.terminateProcessWith(processId, processName)
-                            self.launchReplacement()
-                        case "com.apple.Music":
-                            self.terminateProcessWith(processId, processName)
-                            self.launchReplacement()
-                        default:break
-                    }
+        if statusItem.button?.image == NSImage(named: "StatusBarButtonImageActive") || defaults.bool(forKey: "hideIcon") {
+            if let app = note.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication {
+                if app.bundleIdentifier == "com.apple.Music" {
+                    app.forceTerminate()
+                    self.launchReplacement()
+                }
+                else if app.bundleIdentifier == "com.apple.iTunes" {
+                    app.forceTerminate()
+                    self.launchReplacement()
                 }
             }
         }

@@ -28,7 +28,7 @@ brew install --cask notunes
 
 ### Direct Download
 
-[noTunes-3.3.zip](https://github.com/tombonez/noTunes/releases/download/v3.3/noTunes-3.3.zip)
+[noTunes-3.4.zip](https://github.com/tombonez/noTunes/releases/download/v3.4/noTunes-3.4.zip)
 
 ## Usage
 
@@ -36,7 +36,7 @@ brew install --cask notunes
 
 #### Before Ventura:
 
-Navigate to System Preferences -> Users & Groups.  Under your user, select "Login Items", click the lock on the bottom left and enter your login password to make changes.  Click the plus sign (+) in the main panel and search for noTunes.  Select it and click "Add".
+Navigate to System Preferences -> Users & Groups. Under your user, select "Login Items", click the lock on the bottom left and enter your login password to make changes. Click the plus sign (+) in the main panel and search for noTunes. Select it and click "Add".
 
 #### Ventura and later:
 
@@ -88,6 +88,7 @@ osascript -e 'quit app "noTunes"'
 ### Set replacement for iTunes / Apple Music
 
 Replace `YOUR_MUSIC_APP` with the name of your music app in the following command.
+
 ```bash
 defaults write digital.twisted.noTunes replacement /Applications/YOUR_MUSIC_APP.app
 ```
