@@ -95,6 +95,12 @@ defaults write digital.twisted.noTunes replacement /Applications/YOUR_MUSIC_APP.
 
 Then `/Applications/YOUR_MUSIC_APP.app` will launch when iTunes/Music attempts to launch.
 
+This can be used to open a website too, for example, YouTube Music.
+
+```bash
+defaults write digital.twisted.noTunes replacement https://music.youtube.com/
+```
+
 The following command will disable the replacement.
 
 ```bash
