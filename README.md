@@ -28,7 +28,7 @@ brew install --cask notunes
 
 ### Direct Download
 
-[noTunes-3.4.zip](https://github.com/tombonez/noTunes/releases/download/v3.4/noTunes-3.4.zip)
+[noTunes-3.5.zip](https://github.com/tombonez/noTunes/releases/download/v3.5/noTunes-3.5.zip)
 
 ## Usage
 
@@ -59,7 +59,7 @@ Left click the menu bar icon to toggle between its active states.
 
 ### Hide Menu Bar Icon
 
-Right click the menu bar icon and click `Hide Icon`.
+Right click or control-click the menu bar icon and click `Hide Icon`.
 
 ### Restore Menu Bar Icon
 
@@ -75,7 +75,7 @@ To quit the app either:
 
 **With menu bar icon visible**
 
-Right click the menu bar icon and click quit.
+Right click or control-click the menu bar icon and click quit.
 
 **With menu bar icon hidden**
 
