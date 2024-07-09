@@ -1,14 +1,9 @@
-![noTunes Logo](/screenshots/app-icon.png)
+[![noTunes Logo](/screenshots/app-icon.png)](https://github.com/tombonez/noTunes)
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/tombonez/notunes)
-![GitHub all releases](https://img.shields.io/github/downloads/tombonez/notunes/total)
-![GitHub](https://img.shields.io/github/license/tombonez/notunes)
-
-# Notice
-
-The certificate used in noTunes prior to version 3.2 is set to expire on the 14th January 2022.
-
-To continue using noTunes please update to version 3.2 or greater.
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/tombonez/notunes)](https://github.com/tombonez/noTunes/releases/latest)
+[![GitHub all releases](https://img.shields.io/github/downloads/tombonez/notunes/total)](https://github.com/tombonez/noTunes/releases)
+[![GitHub](https://img.shields.io/github/license/tombonez/notunes)](https://github.com/tombonez/noTunes/blob/master/LICENSE)
+[![GitHub Sponsors](https://img.shields.io/badge/sponsor-tombonez-ec5cc7.svg)](https://github.com/sponsors/tombonez)
 
 # noTunes
 
@@ -20,23 +15,19 @@ You can toggle the apps functionality via the menu bar icon with a simple left c
 
 ## Installation
 
+### Direct Download
+
+[noTunes-3.5.zip](https://github.com/tombonez/noTunes/releases/download/v3.5/noTunes-3.5.zip)
+
 ### Homebrew
 
 ```bash
 brew install --cask notunes
 ```
 
-### Direct Download
-
-[noTunes-3.5.zip](https://github.com/tombonez/noTunes/releases/download/v3.5/noTunes-3.5.zip)
-
 ## Usage
 
 ### Set noTunes to launch at startup
-
-#### Before Ventura:
-
-Navigate to System Preferences -> Users & Groups. Under your user, select "Login Items", click the lock on the bottom left and enter your login password to make changes. Click the plus sign (+) in the main panel and search for noTunes. Select it and click "Add".
 
 #### Ventura and later:
 
@@ -44,6 +35,10 @@ Navigate to System Preferences -> Users & Groups. Under your user, select "Login
 2. Select General
 3. Select Login Items
 4. Click the + under Open at Login and select noTunes
+
+#### Before Ventura:
+
+Navigate to System Preferences -> Users & Groups. Under your user, select "Login Items", click the lock on the bottom left and enter your login password to make changes. Click the plus sign (+) in the main panel and search for noTunes. Select it and click "Add".
 
 ### Toggle noTunes Functionality
 
@@ -106,6 +101,10 @@ The following command will disable the replacement.
 ```bash
 defaults delete digital.twisted.noTunes replacement
 ```
+
+## Support
+
+If you like my work, consider supporting me through [GitHub Sponsors](https://github.com/sponsors/tombonez) 🩷
 
 ## License
 
