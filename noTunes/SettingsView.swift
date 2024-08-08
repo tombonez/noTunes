@@ -10,28 +10,21 @@ import SwiftUI
 import AppKit
 import LaunchAtLogin
 
-// TODO: Fix replacement setting to also use URLs (like in documentation)
-
 @available(macOS 10.15, *)
 struct SettingsView: View {
     @State private var replacement: String = UserDefaults.standard.string(forKey: "replacement") ?? ""
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Replacement Application")
+            Text("Replacement Application or URL")
                 .padding(.bottom, 5)
-
+            
             HStack {
-                Text(replacement.isEmpty ? "No application selected" : replacement)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.vertical, 8)
-                    .padding(.horizontal, 10)
-                    .background(Color(NSColor.windowBackgroundColor))
-                    .cornerRadius(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
+                TextField("Enter application path or URL", text: $replacement, onCommit: {
+                    UserDefaults.standard.set(replacement, forKey: "replacement")
+                })
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Button(action: {
                     let panel = NSOpenPanel()
@@ -49,8 +42,19 @@ struct SettingsView: View {
                     }
                 }) {
                     Text("Browse...")
+                        .frame(width: 60)
                 }
-                .padding(.leading, 10)
+                .padding(.leading, 5)
+                
+                
+                Button(action: {
+                    UserDefaults.standard.removeObject(forKey: "replacement")
+                    replacement = ""
+                }) {
+                    Text("Reset")
+                        .frame(width: 60)
+                }
+                .padding(.leading, 5)
             }
             .padding(.bottom, 20)
             
@@ -61,4 +65,9 @@ struct SettingsView: View {
         .frame(width: 400, height: 150)
         .padding()
     }
+}
+
+@available(macOS 10.15, *)
+#Preview {
+    SettingsView()
 }
