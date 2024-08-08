@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DA35CBC2C65254A005CEEBD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA35CBB2C65254A005CEEBD /* SettingsView.swift */; };
+		9DA35CBE2C65286E005CEEBD /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA35CBD2C65286E005CEEBD /* SettingsWindowController.swift */; };
 		E29B3C731E1D97CF00CB67E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29B3C721E1D97CF00CB67E3 /* AppDelegate.swift */; };
 		E29B3C751E1D97CF00CB67E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29B3C741E1D97CF00CB67E3 /* Assets.xcassets */; };
 		E29B3C781E1D97CF00CB67E3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29B3C761E1D97CF00CB67E3 /* MainMenu.xib */; };
@@ -25,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9DA35CBB2C65254A005CEEBD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9DA35CBD2C65286E005CEEBD /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
 		E29B3C6F1E1D97CF00CB67E3 /* noTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29B3C721E1D97CF00CB67E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E29B3C741E1D97CF00CB67E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				E29B3C741E1D97CF00CB67E3 /* Assets.xcassets */,
 				E29B3C761E1D97CF00CB67E3 /* MainMenu.xib */,
 				E29B3C791E1D97CF00CB67E3 /* Info.plist */,
+				9DA35CBB2C65254A005CEEBD /* SettingsView.swift */,
+				9DA35CBD2C65286E005CEEBD /* SettingsWindowController.swift */,
 			);
 			path = noTunes;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E29B3C731E1D97CF00CB67E3 /* AppDelegate.swift in Sources */,
+				9DA35CBE2C65286E005CEEBD /* SettingsWindowController.swift in Sources */,
+				9DA35CBC2C65254A005CEEBD /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
