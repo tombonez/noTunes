@@ -8,6 +8,9 @@
 
 import SwiftUI
 import AppKit
+import LaunchAtLogin
+
+// TODO: Fix replacement setting to also use URLs (like in documentation)
 
 @available(macOS 10.15, *)
 struct SettingsView: View {
@@ -16,7 +19,6 @@ struct SettingsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Replacement Application")
-                .font(.headline)
                 .padding(.bottom, 5)
 
             HStack {
@@ -51,6 +53,8 @@ struct SettingsView: View {
                 .padding(.leading, 10)
             }
             .padding(.bottom, 20)
+            
+            LaunchAtLogin.Toggle()
 
             Spacer()
         }
