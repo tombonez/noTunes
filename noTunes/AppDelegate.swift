@@ -15,7 +15,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let defaults = UserDefaults.standard
 
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-
+    
+    struct settingsWindowControllerStruct {
+        @available(macOS 10.15, *)
+        static var settingsWindowController: SettingsWindowController?
+    }
+    
     @IBOutlet weak var statusMenu: NSMenu!
 
     @IBAction func hideIconClicked(_ sender: NSMenuItem) {
@@ -26,6 +31,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBAction func quitClicked(_ sender: NSMenuItem) {
         NSApplication.shared.terminate(self)
+    }
+    
+    @IBAction func settingsClicked(_ sender: NSMenuItem) {
+        if #available(macOS 10.15, *) {
+            if settingsWindowControllerStruct.settingsWindowController == nil {
+                settingsWindowControllerStruct.settingsWindowController = SettingsWindowController()
+            }
+            settingsWindowControllerStruct.settingsWindowController?.showWindow(self)
+        } else {
+            let alert = NSAlert()
+            alert.messageText = "Settings Unavailable"
+            alert.informativeText = "The settings screen is not available on this version of macOS. Please see the full documentation."
+            alert.addButton(withTitle: "Open Documentation")
+            alert.addButton(withTitle: "Cancel")
+            
+            let response = alert.runModal()
+            if response == .alertFirstButtonReturn {
+                if let url = URL(string: "https://github.com/tombonez/noTunes#usage") {
+                    NSWorkspace.shared.open(url)
+                }
+            }
+        }
     }
 
     @objc func statusBarButtonClicked(sender: NSStatusBarButton) {
