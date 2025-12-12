@@ -29,14 +29,14 @@ brew install --cask notunes
 
 ### Set noTunes to launch at startup
 
-#### Ventura and later:
+#### macOS Ventura (13.x) and later:
 
 1. Navigate to System Settings
 2. Select General
 3. Select Login Items
 4. Click the + under Open at Login and select noTunes
 
-#### Before Ventura:
+#### macOS Montery (12.x) and older:
 
 Navigate to System Preferences -> Users & Groups. Under your user, select "Login Items", click the lock on the bottom left and enter your login password to make changes. Click the plus sign (+) in the main panel and search for noTunes. Select it and click "Add".
 
