@@ -1,29 +1,25 @@
-[![noTunes Logo](/screenshots/app-icon.png)](https://github.com/tombonez/noTunes)
+[![noTunes Logo](/screenshots/app-icon.png)](https://github.com/zemendes1/nope)
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/tombonez/notunes)](https://github.com/tombonez/noTunes/releases/latest)
-[![GitHub all releases](https://img.shields.io/github/downloads/tombonez/notunes/total)](https://github.com/tombonez/noTunes/releases)
-[![GitHub](https://img.shields.io/github/license/tombonez/notunes)](https://github.com/tombonez/noTunes/blob/master/LICENSE)
-[![GitHub Sponsors](https://img.shields.io/badge/sponsor-tombonez-ec5cc7.svg)](https://github.com/sponsors/tombonez)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/zemendes1/nope)](https://github.com/zemendes1/nope/releases/latest)
+[![GitHub all releases](https://img.shields.io/github/downloads/zemendes1/nope/total)](https://github.com/zemendes1/nope/releases)
+[![GitHub](https://img.shields.io/github/license/zemendes1/nope)](https://github.com/zemendes1/nope/blob/master/LICENSE)
+[![GitHub Sponsors](https://img.shields.io/badge/sponsor-zemendes1-ec5cc7.svg)](https://github.com/sponsors/zemendes1)
 
-# noTunes
+# nope
 
-noTunes is a macOS application that will prevent iTunes _or_ Apple Music from launching.
+nope is a macOS menu bar app that stops built-in apps you never use, like Apple Music or Games, from launching.
 
-Simply launch the noTunes app and iTunes/Music will no longer be able to launch. For example, when bluetooth headphones reconnect.
+Launch nope and those apps won't be able to open, even when macOS tries to open them on its own, for example when your Bluetooth headphones reconnect.
 
-You can toggle the apps functionality via the menu bar icon with a simple left click.
+Left-click the menu bar icon to turn it on or off.
+
+nope is based on [noTunes](https://github.com/tombonez/noTunes) by Tom Taylor.
 
 ## Installation
 
 ### Direct Download
 
-[noTunes-3.5.zip](https://github.com/tombonez/noTunes/releases/download/v3.5/noTunes-3.5.zip)
-
-### Homebrew
-
-```bash
-brew install --cask notunes
-```
+Download the latest release from the [Releases page](https://github.com/zemendes1/nope/releases/latest).
 
 ## Usage
 
@@ -104,8 +100,8 @@ defaults delete digital.twisted.noTunes replacement
 
 ## Support
 
-If you like my work, consider supporting me through [GitHub Sponsors](https://github.com/sponsors/tombonez) 🩷
+If you like my work, consider supporting me through [GitHub Sponsors](https://github.com/sponsors/zemendes1) 🩷
 
 ## License
 
-The code is available under the [MIT License](https://github.com/tombonez/notunes/blob/master/LICENSE).
+The code is available under the [MIT License](https://github.com/zemendes1/nope/blob/master/LICENSE).
